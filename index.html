@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carine Fonseca Turismo | Foz do Iguaçu</title>
+<meta name="description" content="Transporte turístico privativo em Foz do Iguaçu, Ciudad del Este (PY) e Puerto Iguazú (AR) com Carine Fonseca." />
+<style>
+:root{--brand:#0ea5b5;--brand-dark:#0b8a98;--text:#0f172a;--muted:#475569;--bg:#ffffff;--card:#f8fafc}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Open Sans','Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+img{max-width:100%;display:block;border-radius:12px}
+a{color:inherit;text-decoration:none}
+header{background:linear-gradient(180deg, rgba(14,165,181,.12), rgba(14,165,181,0));border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:30;backdrop-filter:saturate(180%) blur(10px);background-color:rgba(255,255,255,.8)}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.topbar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:36px;height:36px;border-radius:12px;background:var(--brand);display:grid;place-items:center;color:#fff;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+nav a{font-weight:600;color:var(--muted);margin-left:18px}
+nav a:hover{color:var(--text)}
+.hero{display:grid;gap:28px;padding:36px 0 12px 0}
+.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:8px 0}
+.hero p{color:var(--muted);font-size:clamp(16px,2.2vw,18px)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.btn{appearance:none;border:none;border-radius:14px;padding:14px 18px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark)}
+section{padding:48px 0}
+h2{font-size:clamp(22px,3.2vw,30px);margin:0 0 8px 0}
+.lead{color:var(--muted);margin:0 0 24px 0}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:50}
+.wa-btn{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:30px;box-shadow:0 10px 20px rgba(0,0,0,.18)}
+.wa-label{position:fixed;right:86px;bottom:26px;background:#111827;color:#fff;padding:8px 10px;border-radius:10px;font-size:13px;box-shadow:0 8px 16px rgba(0,0,0,.16)}
+footer{border-top:1px solid #e2e8f0;background:#fff;padding:22px 0;color:var(--muted);font-size:14px;text-align:center}
+/* Carrossel */
+.carousel-container{position:relative;overflow:hidden}
+.carousel-track{display:flex;transition:transform 0.4s ease-in-out}
+.carousel-card{min-width:250px;margin-right:16px;background:var(--card);border-radius:16px;padding:16px;text-align:center;flex-shrink:0}
+.carousel-card img{height:180px;object-fit:cover;margin-bottom:12px;border-radius:12px}
+.carousel-card h3{margin:8px 0 4px 0;font-size:18px}
+.carousel-card p{color:var(--muted);font-size:14px}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:var(--brand);color:#fff;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:20px;z-index:10}
+.prev{left:8px}
+.next{right:8px}
+@media(max-width:900px){.carousel-card img{height:150px}}
+@media(max-width:640px){.carousel-card img{height:120px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <div class="logo">Logo Aqui</div>
+      <div><strong>Carine Fonseca Turismo</strong><br/><small style="color:var(--muted)">Foz do Iguaçu • PY • AR</small></div>
+    </div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container hero">
+  <span class="tag">Transporte Turístico Privativo</span>
+  <h1>Veja o que eu faço e chame no WhatsApp quando quiser</h1>
+  <p>Sou <strong>Carine Fonseca</strong> e transporto passageiros para os principais pontos turísticos de Foz do Iguaçu, compras no Paraguai e passeios em Puerto Iguazú.</p>
+  <div class="cta">
+    <a class="btn btn-primary" id="ctaWA" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="container">
+    <h2>Serviços</h2>
+    <p class="lead">Atendimento porta a porta, horários combinados, carro higienizado e ar-condicionado.</p>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-card">
+          <img src="https://explorefozdoiguacu.com.br/wp-content/uploads/2023/09/compras-no-paraguai.jpg" alt="Compras no Paraguai">
+          <h3>Compras no Paraguai</h3>
+        </div>
+        <div class="carousel-card">
+          <img src="https://explorefozdoiguacu.com.br/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-11-at-18.45.24-1-768x1024.jpeg" alt="Feirinha da Argentina">
+          <h3>Feirinha da Argentina</h3>
+        </div>
+        <div class="carousel-card">
+          <img src="https://s2-redeglobo.glbimg.com/dpq2UXwmDdLX5Uz3fvVUyT7YbTI=/0x0:1080x608/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2024/w/f/nATut8RzARAZjOI4Bvfw/capa-home-48-.png" alt="Cataratas do Brasil">
+          <h3>Cataratas do Brasil</h3>
+        </div>
+        <div class="carousel-card">
+          <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2024/07/cataratas-do-iguacu-reabre-passarela-capa.jpg" alt="Cataratas da Argentina">
+          <h3>Cataratas da Argentina</h3>
+        </div>
+        <div class="carousel-card">
+          <img src="https://www.gov.br/aneel/pt-br/assuntos/noticias/2025/aneel-aprova-tarifa-definitiva-de-repasse-de-energia-de-itaipu-para-2025/itaipu.png/@@images/bc01f58e-4f22-4126-97d1-67a4ebdad938.png" alt="Itaipu Binacional">
+          <h3>Itaipu Binacional</h3>
+        </div>
+        <div class="carousel-card">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/53/36/0a/entrada-principal-ao.jpg" alt="Movie Cars">
+          <h3>Movie Cars</h3>
+        </div>
+        <div class="carousel-card">
+          <img src="https://www.hoteldelreyfoz.com/wp-content/uploads/2018/02/imgns-blog-MAR22-BUDISTA3.jpg" alt="Templo Budista">
+          <h3>Templo Budista</h3>
+        </div>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="container">
+    <h2>O que dizem</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track" id="depoTrack">
+        <div class="carousel-card">
+          <img src="https://img.freepik.com/fotos-gratis/homem-de-tiro-medio-com-penteado-afro_23-2150677135.jpg" alt="Carlos">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>Fizemos compras no PY com tranquilidade, tudo combinado certinho. — Carlos</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://img.freepik.com/fotos-gratis/mulher-linda-a-sorrir_23-2148729653.jpg" alt="Juliana">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>Atendimento excelente e muito pontual. Recomendo! — Juliana</p>
+        </div>
+        <div class="carousel-card">
+          <img src="https://img.freepik.com/fotos-gratis/pessoa-de-origem-indiana-se-divertindo_23-2150285283.jpg" alt="Roberta">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>Passeio em Foz e Argentina perfeito para nossa família. — Roberta</p>
+        </div>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <h2>Contato</h2>
+    <p class="lead">Diga seu hotel/horário e eu retorno com orçamento.</p>
+    <div class="card">
+      <h3>Fale comigo</h3>
+      <p><strong>WhatsApp:</strong> <a id="linkWAinline" target="_blank" rel="noopener">Clique para abrir</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/carineturismo" target="_blank">@carine_turismo</a></p>
+      <p style="font-size:13px;color:var(--muted)">Atendimento em Português e Espanhol. Valores variam conforme data e número de passageiros.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mapa">
+  <div class="container">
+    <h2>Nosso Local</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1234567890!2d-54.5881!3d-25.5163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDMwJzAwLjAiUyA1NMKwMzUnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v0000000000" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Carine Fonseca Turismo — Todos os direitos reservados.</footer>
+
+<div class="wa-float">
+  <span class="wa-label">Falar com Carine</span>
+  <a class="wa-btn" id="waFloat" aria-label="Abrir WhatsApp" target="_blank" rel="noopener">💬</a>
+</div>
+
+<script>
+const WHATSAPP_NUMBER = '5545991469037';
+const MSG = 'Oi Carine! Quero informações sobre passeios em Foz/PY/AR.';
+const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(MSG)}`;
+document.getElementById('ctaWA').href = waLink;
+document.getElementById('waFloat').href = waLink;
+document.getElementById('linkWAinline').href = waLink;
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Carrossel Serviços
+const track = document.getElementById('carouselTrack');
+const prevBtn = track.parentElement.querySelector('.prev');
+const nextBtn = track.parentElement.querySelector('.next');
+let index = 0;
+function updateCarousel(){
+  const cardWidth = track.children[0].offsetWidth + 16;
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+prevBtn.addEventListener('click',()=>{index = (index - 1 + track.children.length) % track.children.length;updateCarousel();});
+nextBtn.addEventListener('click',()=>{index = (index + 1) % track.children.length;updateCarousel();});
+
+// Carrossel Depoimentos
+const depoTrack = document.getElementById('depoTrack');
+const depoPrev = depoTrack.parentElement.querySelector('.prev');
+const depoNext = depoTrack.parentElement.querySelector('.next');
+let depoIndex=0;
+function updateDepo(){
+  const cardWidth = depoTrack.children[0].offsetWidth + 16;
+  depoTrack.style.transform = `translateX(-${depoIndex * cardWidth}px)`;
+}
+depoPrev.addEventListener('click',()=>{depoIndex=(depoIndex-1+depoTrack.children.length)%depoTrack.children.length;updateDepo();});
+depoNext.addEventListener('click',()=>{depoIndex=(depoIndex+1)%depoTrack.children.length;updateDepo();});
+</script>
+</body>
+</html>
